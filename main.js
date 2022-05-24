@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         张鑫旭博客去广告、游民星空H5新闻页浏览体验优化、知乎文章详情页隐藏标题
 // @namespace    http://tampermonkey.net/
-// @version      1.00
+// @version      1.01
 // @description  优化一些网站的浏览体验，问题反馈773520054@qq.com
 // @author       zhu
 // @match        *://www.zhangxinxu.com/*
