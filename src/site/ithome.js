@@ -4,7 +4,7 @@ export default function () {
 
   // DOM结构加载完毕
   document.addEventListener('DOMContentLoaded',function(){
-    if(location.href.match('://m.ithome.com/')){ // it之家H5
+    if(location.href.match('://m.ithome.com/')){
 
       {
         // 去除一些页面元素
@@ -16,6 +16,7 @@ export default function () {
         for (let i = 0; i < items.length; i++) {
           let node = document.querySelectorAll(items[i])
           if(node && node.length > 0) {
+            console.log('已触发 ' + items[i])
             for (let i = 0; i < node.length; i++) {
               node[i].remove()
             }
@@ -28,6 +29,7 @@ export default function () {
         function removeAD() {
           let node = document.querySelectorAll('.tip-gray')
           if(node && node.length > 0) {
+            console.log('已触发 ' + '.tip-gray')
             for (let i = 0; i < node.length; i++) {
               node[i].parentNode.parentNode.parentNode.parentNode.remove()
             }
@@ -52,11 +54,12 @@ export default function () {
 
   // 网页加载完毕
   window.addEventListener('load',function(){
-    if (location.href.match('://m.ithome.com/')) { // it之家
-      {
-        // 首页去除底部banner
-        let node = document.querySelector('.open-app-banner')
-        if(node) node.remove()
+    if (location.href.match('://m.ithome.com/')) {
+      // 首页去除底部banner
+      let node = document.querySelector('.open-app-banner')
+      if (node) {
+        console.log('已触发 ' + '.open-app-banner')
+        node.remove()
       }
     }
   })

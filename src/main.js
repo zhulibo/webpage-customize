@@ -1,6 +1,6 @@
-
 import gamersky from "./site/gamersky";
 import ithome from "./site/ithome";
+import zhangxinxu from "./site/zhangxinxu";
 import zhihu from "./site/zhihu";
 
 // ==UserScript==
@@ -21,4 +21,5 @@ import zhihu from "./site/zhihu";
 
 gamersky()
 ithome()
+zhangxinxu()
 zhihu()

@@ -2,7 +2,7 @@ export default function () {
 
   // DOM结构加载完毕
   document.addEventListener('DOMContentLoaded',function(){
-    if(location.href.match('://wap.gamersky.com/news/')){ // 游民星空H5
+    if(location.href.match('://wap.gamersky.com/news/')){
 
       {
         // 新闻页去除一些页面元素
@@ -11,7 +11,7 @@ export default function () {
           '.ymw-header2018', // 详情页head
           '.ymw-header2019', // 列表页顶部引导下载
           '.ymw-header2021', // 详情页顶部引导下载
-          '.gsTgWapConBdshareTopBox', // 详情页打开游民APP，查看更多精彩内容
+          '.gsTgWapConBdshareTop', // 详情页打开游民APP，查看更多精彩内容
           '.gameCard', // 详情页gameCard
           '.ymw-rel-list', // 详情页app精彩推荐、相关内容
           '.ymw-hot-h5-game', // 详情页热门h5手游
@@ -20,6 +20,7 @@ export default function () {
         for (let i = 0; i < items.length; i++) {
           let node = document.querySelectorAll(items[i])
           if(node && node.length > 0) {
+            console.log('已触发 ' + items[i])
             for (let i = 0; i < node.length; i++) {
               node[i].remove()
             }
@@ -45,13 +46,19 @@ export default function () {
       {
         // 新闻详情页文章自动展开
         let node = document.querySelector('#gsAreaContextOpen')
-        if(node) node.click()
+        if(node) {
+          console.log('已触发 ' + '#gsAreaContextOpen')
+          node.click()
+        }
       }
 
       {
         // 新闻详情页修改内容上边距
         let node = document.querySelector('.ymwContxt')
-        if(node) node.style.paddingTop = '.4rem'
+        if(node) {
+          console.log('已触发 ' + '.ymwContxt')
+          node.style.paddingTop = '.4rem'
+        }
       }
 
     }
@@ -60,10 +67,14 @@ export default function () {
   // 网页加载完毕
   window.addEventListener('load',function(){
 
-    if (location.href.match('://wap.gamersky.com/news/')) { // 游民星空H5
+    if (location.href.match('://wap.gamersky.com/news/')) {
       // 去除详情页打开游民APP，查看xx条精彩评论
       let node = document.querySelector('#SOHUCS > a')
-      if (node) node.remove()
+      if (node) {
+        console.log('已触发 ' + '#SOHUCS > a')
+        node.remove()
+      }
+
     }
 
   })
