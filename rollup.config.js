@@ -1,9 +1,10 @@
 // import {terser} from "rollup-plugin-terser";
+import { nodeResolve } from '@rollup/plugin-node-resolve';
 
 export default {
   input: './src/main.js',
   output: {
-    file: './lib/main.js',
+    file: './dist/main.js',
     format: 'esm'
   },
   plugins: [
@@ -12,6 +13,7 @@ export default {
     //   format: {
     //     comments: true
     //   }
-    // })
+    // }),
+    nodeResolve()
   ]
 }

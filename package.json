@@ -1,13 +1,17 @@
 {
   "name": "webpage-customize",
   "version": "1.0.0",
-  "description": "This is a tampermonkey plugin, customized some webpage to make it more accessible",
+  "description": "a tampermonkey plugin, customized some webpage to make it more accessible",
   "scripts": {
     "build": "rollup --config"
   },
   "author": "",
   "license": "MIT",
+  "dependencies": {
+    "js-fragment": "^1.0.5"
+  },
   "devDependencies": {
+    "@rollup/plugin-node-resolve": "^13.3.0",
     "rollup": "^2.75.7",
     "rollup-plugin-terser": "^7.0.2"
   }
