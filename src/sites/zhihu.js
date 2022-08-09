@@ -9,5 +9,11 @@ export default function () {
         node.style.display = 'none'
       }
     }
+    // 解除站内拦截
+    if (location.href.match('://link.zhihu.com/')) {
+      let target = location.href.split('?target=')[1]
+      console.log('已触发 ' + target)
+      location.href = decodeURIComponent(target)
+    }
   })
 }
