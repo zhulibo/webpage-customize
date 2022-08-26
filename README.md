@@ -27,6 +27,7 @@ A tampermonkey plugin which customize some webpage to make it more accessible
 // @match        *://wap.gamersky.com/news/*
 // @match        *.zhihu.com/*
 // @match        *://m.ithome.com/*
+// @match        *://www.ithome.com/*
 // @icon         https://www.w3.org/2008/site/images/favicon.ico
 // @grant        none
 // @run-at       document-start

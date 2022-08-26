@@ -4,6 +4,7 @@ export default function () {
 
   // DOM结构加载完毕
   document.addEventListener('DOMContentLoaded',function(){
+
     if(location.href.match('://m.ithome.com/')){
 
       {
@@ -50,6 +51,16 @@ export default function () {
       }
 
     }
+
+    else if (location.href.match('://www.ithome.com/')){
+      // 首页去除头条
+      let node = document.querySelector('#tt')
+      if (node) {
+        console.log('已触发 ' + '#tt')
+        node.remove()
+      }
+    }
+
   })
 
   // 网页加载完毕
