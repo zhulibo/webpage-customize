@@ -1,4 +1,4 @@
-import {getNodeIterator} from "../utils/utils";
+import {getNodeIterator} from "js-fragment";
 
 export default function () {
   // DOM结构加载完毕

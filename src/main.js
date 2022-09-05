@@ -2,6 +2,7 @@ import gamersky from "./sites/gamersky";
 import ithome from "./sites/ithome";
 import zhangxinxu from "./sites/zhangxinxu";
 import zhihu from "./sites/zhihu";
+import aliyundrive from "./sites/aliyundrive";
 
 // ==UserScript==
 // @name         优化网站浏览体验、去广告、自动展开、解除跳转拦截等
@@ -14,6 +15,7 @@ import zhihu from "./sites/zhihu";
 // @match        *.zhihu.com/*
 // @match        *://m.ithome.com/*
 // @match        *://www.ithome.com/*
+// @match        *://www.aliyundrive.com/drive*
 // @icon         https://www.w3.org/2008/site/images/favicon.ico
 // @grant        none
 // @run-at       document-start
@@ -24,3 +26,4 @@ gamersky()
 ithome()
 zhangxinxu()
 zhihu()
+aliyundrive()
