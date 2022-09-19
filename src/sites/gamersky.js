@@ -28,20 +28,21 @@ export default function () {
         }
       }
 
-      // // todo 未知原因 click事件不生效
-      // {
-      //   // 触底自动加载更多
-      //   window.addEventListener('scroll', loadData)
-      //   function loadData() {
-      //     let clientHeight = document.documentElement.clientHeight
-      //     let scrollHeight = document.documentElement.scrollHeight
-      //     let scrollTop = document.documentElement.scrollTop
-      //     if (scrollTop + clientHeight >= scrollHeight) {
-      //       let node = document.querySelector('.ymw-more')
-      //       if(node) node.click()
-      //     }
-      //   }
-      // }
+      {
+        // 触底自动加载更多
+        window.addEventListener('scroll', loadData)
+        function loadData() {
+          let clientHeight = document.documentElement.clientHeight
+          let scrollHeight = document.documentElement.scrollHeight
+          let scrollTop = document.documentElement.scrollTop
+          if (scrollTop + clientHeight >= scrollHeight) {
+            let node = document.querySelector('.ymw-more')
+            let event = new Event('touchend')
+            console.log('已触发 ' + '.ymw-more')
+            if(node) node.dispatchEvent(event)
+          }
+        }
+      }
 
       {
         // 新闻详情页文章自动展开

@@ -54,10 +54,12 @@ export default function () {
 
     else if (location.href.match('://www.ithome.com/')){
       // 首页去除头条
-      let node = document.querySelector('#tt')
+      let node = document.querySelectorAll('#tt a')
       if (node) {
-        console.log('已触发 ' + '#tt')
-        node.remove()
+        console.log('已触发 ' + '#tt a')
+        for (let i = 0; i < node.length; i++) {
+          node[i].style.fontSize = '14px'
+        }
       }
     }
 
