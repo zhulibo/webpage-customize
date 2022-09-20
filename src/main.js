@@ -19,7 +19,7 @@ import aliyundrive from "./sites/aliyundrive";
 // @icon         https://www.w3.org/2008/site/images/favicon.ico
 // @grant        none
 // @run-at       document-start
-// @LICENSE      MIT
+// @license      MIT
 // ==/UserScript==
 
 gamersky()

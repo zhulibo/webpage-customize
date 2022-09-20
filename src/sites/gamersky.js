@@ -1,3 +1,5 @@
+import {throttle} from "js-fragment";
+
 export default function () {
 
   // DOM结构加载完毕
@@ -30,7 +32,8 @@ export default function () {
 
       {
         // 触底自动加载更多
-        window.addEventListener('scroll', loadData)
+        let handle = throttle(loadData, 100)
+        window.addEventListener('scroll', handle)
         function loadData() {
           let clientHeight = document.documentElement.clientHeight
           let scrollHeight = document.documentElement.scrollHeight
