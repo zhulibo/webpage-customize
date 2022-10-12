@@ -53,7 +53,7 @@ export default function () {
     }
 
     else if (location.href.match('://www.ithome.com/')){
-      // 首页去除头条
+      // 减小首页头条字体
       let node = document.querySelectorAll('#tt a')
       if (node) {
         console.log('已触发 ' + '#tt a')
