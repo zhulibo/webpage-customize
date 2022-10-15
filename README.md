@@ -28,11 +28,10 @@ A tampermonkey plugin which customize some webpage to make it more accessible
 // @match        *.zhihu.com/*
 // @match        *://m.ithome.com/*
 // @match        *://www.ithome.com/*
-// @match        *://www.aliyundrive.com/drive*
 // @icon         https://www.w3.org/2008/site/images/favicon.ico
 // @grant        none
 // @run-at       document-start
 // @license      MIT
-// @require      file:///C:\Users\Lenovo\Desktop\webpage-customize\lib\main.js
+// @require      file:///Users/libozhu/Desktop/webpage-customize/lib/main.js
 // ==/UserScript==
 ```
