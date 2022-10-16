@@ -1,10 +1,13 @@
-import {throttle} from "js-fragment";
+import {addStyle, throttle} from "js-fragment";
 
 export default function () {
 
   // DOM结构加载完毕
   document.addEventListener('DOMContentLoaded',function(){
     if(location.href.match('://wap.gamersky.com/news/')){
+
+      // pc端访问手机端网页时，修正字体过大的问题
+      addStyle('@media (min-width: 600px) {html{font-size: 60px!important} html .mainArea{ width: 10rem}}')
 
       {
         // 新闻页去除一些页面元素
@@ -18,6 +21,8 @@ export default function () {
           '.ymw-rel-list', // 详情页app精彩推荐、相关内容
           '.ymw-hot-h5-game', // 详情页热门h5手游
           '.ymw-footer', // 详情页footer
+          '.BaiduAdvertising', // 详情页顶部百度广告
+          '._0vyin34jlngb', // 详情页底部百度广告
         ]
         for (let i = 0; i < items.length; i++) {
           let node = document.querySelectorAll(items[i])
@@ -28,6 +33,12 @@ export default function () {
             }
           }
         }
+
+        // 防止查找.ymw-rel-mgame报错
+        const element = document.createElement('div')
+        element.className = 'ymw-rel-mgame'
+        document.body.append(element)
+
       }
 
       {
@@ -72,11 +83,25 @@ export default function () {
   window.addEventListener('load',function(){
 
     if (location.href.match('://wap.gamersky.com/news/')) {
-      // 去除详情页打开游民APP，查看xx条精彩评论
-      let node = document.querySelector('#SOHUCS > a')
-      if (node) {
-        console.log('已触发 ' + '#SOHUCS > a')
-        node.remove()
+
+      {
+        // 去除详情页打开游民APP，查看xx条精彩评论
+        let node = document.querySelector('#SOHUCS > a')
+        if (node) {
+          console.log('已触发 ' + '#SOHUCS > a')
+          node.remove()
+        }
+      }
+
+      {
+        // 详情页底部百度广告
+        let node = document.querySelectorAll('a.countHit.countHitSql')
+        if(node) {
+          console.log('已触发 ' + 'a.countHit.countHitSql')
+          for (let i = 0; i < node.length; i++) {
+            node[i].parentElement.remove()
+          }
+        }
       }
 
     }
