@@ -1,3 +1,4 @@
+// 知乎
 export default function () {
   // 网页加载完毕
   window.addEventListener('load',function(){
@@ -8,15 +9,6 @@ export default function () {
         let node = document.querySelector('.PageHeader')
         if (node) {
           console.log('已触发 ' + '.PageHeader')
-          node.style.display = 'none'
-        }
-      }
-
-      {
-        // 关闭顶部banner
-        let node = document.querySelector('.Topstory>div:first-child')
-        if (node) {
-          console.log('已触发 ' + '.Topstory>div:first-child')
           node.style.display = 'none'
         }
       }

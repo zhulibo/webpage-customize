@@ -17,5 +17,3 @@ export default {
     nodeResolve()
   ]
 }
-
-// todo UserScript注释放在头部 b站自动全屏

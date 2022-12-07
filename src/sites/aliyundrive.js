@@ -1,5 +1,6 @@
 import {addStyle} from "js-fragment";
 
+// 阿里云盘
 export default function () {
   // DOM结构加载完毕
   document.addEventListener('DOMContentLoaded',function(){

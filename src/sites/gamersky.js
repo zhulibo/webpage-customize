@@ -1,5 +1,6 @@
 import {addStyle, throttle} from "js-fragment";
 
+// 游民星空
 export default function () {
 
   // DOM结构加载完毕
