@@ -32,6 +32,6 @@ A tampermonkey plugin which customize some webpage to make it more accessible
 // @grant        none
 // @run-at       document-start
 // @license      MIT
-// @require      file:///Users/libozhu/Desktop/webpage-customize/lib/main.js
+// @require      file://C:\Users\yoyoy\Desktop\webpage-customize\lib\main.js
 // ==/UserScript==
 ```
