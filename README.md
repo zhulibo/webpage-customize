@@ -23,11 +23,13 @@ A tampermonkey plugin which customize some webpage to make it more accessible
 // @version      1.00
 // @description  require本地文件
 // @author       zhu
+// @match        *://www.bilibili.com/*
 // @match        *://www.zhangxinxu.com/*
 // @match        *://wap.gamersky.com/news/*
 // @match        *.zhihu.com/*
 // @match        *://m.ithome.com/*
 // @match        *://www.ithome.com/*
+// @match        *://www.aliyundrive.com/drive*
 // @icon         https://www.w3.org/2008/site/images/favicon.ico
 // @grant        none
 // @run-at       document-start

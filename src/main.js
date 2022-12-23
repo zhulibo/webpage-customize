@@ -1,3 +1,4 @@
+import bilibili from "./sites/bilibili";
 import gamersky from "./sites/gamersky";
 import ithome from "./sites/ithome";
 import zhangxinxu from "./sites/zhangxinxu";
@@ -10,6 +11,7 @@ import aliyundrive from "./sites/aliyundrive";
 // @version      1.06
 // @description  张鑫旭博客、it之家、游民星空H5新闻页、知乎文章详情页(repository: https://github.com/zhulibo/webpage-customize)
 // @author       zhu
+// @match        *://www.bilibili.com/*
 // @match        *://www.zhangxinxu.com/*
 // @match        *://wap.gamersky.com/news/*
 // @match        *.zhihu.com/*
@@ -22,6 +24,7 @@ import aliyundrive from "./sites/aliyundrive";
 // @license      MIT
 // ==/UserScript==
 
+bilibili()
 gamersky()
 ithome()
 zhangxinxu()

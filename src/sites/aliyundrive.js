@@ -6,9 +6,9 @@ export default function () {
   document.addEventListener('DOMContentLoaded',function(){
     if(location.href.match('://www.aliyundrive.com/drive')){
 
-      // 全屏观看视频时背景设置为黑色
+      // 关闭屏幕中间开通会员提示
       {
-        addStyle('.video-previewer-container--3N0eI {background: #000}')
+        addStyle('.business-tip--1SI5w {opacity: 0!important}')
       }
 
     }
