@@ -8,7 +8,7 @@ import aliyundrive from "./sites/aliyundrive";
 // ==UserScript==
 // @name         优化网站浏览体验、去广告、自动展开、解除跳转拦截等
 // @namespace    http://tampermonkey.net/
-// @version      1.06
+// @version      1.07
 // @description  张鑫旭博客、it之家、游民星空H5新闻页、知乎文章详情页(repository: https://github.com/zhulibo/webpage-customize)
 // @author       zhu
 // @match        *://www.bilibili.com/*
