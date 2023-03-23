@@ -8,7 +8,7 @@ export default function () {
 
       // 关闭屏幕中间开通会员提示
       {
-        addStyle('.business-tip--1SI5w {opacity: 0!important}')
+        addStyle('.business-tip--1SI5w {display: none!important}')
       }
 
     }

@@ -13,7 +13,7 @@ export default function () {
         })
         let currentNode
         while (currentNode = nodeIterator.nextNode()) {
-          console.log('已触发 ' + '/^[a-zA-Z]{4}-[a-zA-Z]{2}$/')
+          console.log('已触发', currentNode)
           currentNode.remove()
         }
       }
@@ -25,7 +25,7 @@ export default function () {
         })
         let currentNode
         while (currentNode = nodeIterator.nextNode()) {
-          console.log('已触发 ' + '/^col-left-[a-zA-Z]{4}$/')
+          console.log('已触发', currentNode)
           currentNode.remove()
         }
       }

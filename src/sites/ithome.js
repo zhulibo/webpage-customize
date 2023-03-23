@@ -3,17 +3,17 @@ import {throttle} from "js-fragment";
 // it之家
 export default function () {
 
+  let isNewsList = location.href.match(/:\/\/m.ithome.com\/$/)
+  let isNewsDetail = location.href.match(/:\/\/m.ithome.com\/.+$/)
+  let isPC = location.href.match(/:\/\/www.ithome.com\//)
+
   // DOM结构加载完毕
   document.addEventListener('DOMContentLoaded',function(){
-
-    if(location.href.match('://m.ithome.com/')){
-
+    if(isNewsList){
       {
         // 去除一些页面元素
         let items = [
-          '.fixed-btn', // 首页悬浮打开app按钮
-          '.open-app', // 资讯详情页悬浮打开app按钮
-          '.hot-app', // 资讯详情页底部软媒旗下人气应用
+          '.fixed-btn', // 打开app按钮
         ]
         for (let i = 0; i < items.length; i++) {
           let node = document.querySelectorAll(items[i])
@@ -53,7 +53,27 @@ export default function () {
 
     }
 
-    else if (location.href.match('://www.ithome.com/')){
+    else if(isNewsDetail){
+      {
+        // 去除一些页面元素
+        let items = [
+          '.open-app', // 打开app按钮
+          '.hot-app', // 底部软媒旗下人气应用
+        ]
+        for (let i = 0; i < items.length; i++) {
+          let node = document.querySelectorAll(items[i])
+          if(node && node.length > 0) {
+            console.log('已触发 ' + items[i])
+            for (let i = 0; i < node.length; i++) {
+              node[i].remove()
+            }
+          }
+        }
+      }
+
+    }
+
+    else if (isPC){
       // 减小首页头条字体
       let node = document.querySelectorAll('#tt a')
       if (node) {
@@ -68,7 +88,7 @@ export default function () {
 
   // 网页加载完毕
   window.addEventListener('load',function(){
-    if (location.href.match('://m.ithome.com/')) {
+    if (isNewsList) {
       // 首页去除底部banner
       let node = document.querySelector('.open-app-banner')
       if (node) {
