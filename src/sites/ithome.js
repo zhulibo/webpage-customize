@@ -7,9 +7,8 @@ export default function () {
   let isNewsDetail = location.href.match(/:\/\/m.ithome.com\/.+$/)
   let isPC = location.href.match(/:\/\/www.ithome.com\//)
 
-  // DOM结构加载完毕
-  document.addEventListener('DOMContentLoaded',function(){
-    if(isNewsList){
+  if(isNewsList){
+    document.addEventListener('DOMContentLoaded',function(){
       {
         // 去除一些页面元素
         let items = [
@@ -51,9 +50,22 @@ export default function () {
         window.addEventListener('scroll', handle)
       }
 
-    }
+    })
 
-    else if(isNewsDetail){
+    window.addEventListener('load',function(){
+      {
+        // 首页去除底部banner
+        let node = document.querySelector('.open-app-banner')
+        if (node) {
+          console.log('已触发 ' + '.open-app-banner')
+          node.remove()
+        }
+      }
+
+    })
+  }
+  else if(isNewsDetail){
+    document.addEventListener('DOMContentLoaded',function() {
       {
         // 去除一些页面元素
         let items = [
@@ -71,31 +83,22 @@ export default function () {
         }
       }
 
-    }
-
-    else if (isPC){
-      // 减小首页头条字体
-      let node = document.querySelectorAll('#tt a')
-      if (node) {
-        console.log('已触发 ' + '#tt a')
-        for (let i = 0; i < node.length; i++) {
-          node[i].style.fontSize = '14px'
+    })
+  }
+  else if (isPC){
+    document.addEventListener('DOMContentLoaded',function() {
+      {
+        // 减小首页头条字体
+        let node = document.querySelectorAll('#tt a')
+        if (node) {
+          console.log('已触发 ' + '#tt a')
+          for (let i = 0; i < node.length; i++) {
+            node[i].style.fontSize = '14px'
+          }
         }
       }
-    }
 
-  })
-
-  // 网页加载完毕
-  window.addEventListener('load',function(){
-    if (isNewsList) {
-      // 首页去除底部banner
-      let node = document.querySelector('.open-app-banner')
-      if (node) {
-        console.log('已触发 ' + '.open-app-banner')
-        node.remove()
-      }
-    }
-  })
+    })
+  }
 
 }

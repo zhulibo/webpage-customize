@@ -24,12 +24,11 @@ A tampermonkey plugin which customize some webpage to make it more accessible
 // @description  require本地文件
 // @author       zhu
 // @match        *://www.aliyundrive.com/drive*
+// @match        *.baidu.com/*
 // @match        *://www.bilibili.com/*
 // @match        *://wap.gamersky.com/news/*
-// @match        *://www.ithome.com/*
-// @match        *://m.ithome.com/*
-// @match        *://juejin.cn/*
-// @match        *://link.juejin.cn/*
+// @match        *.ithome.com/*
+// @match        *.juejin.cn/*
 // @match        *://www.zhangxinxu.com/*
 // @match        *.zhihu.com/*
 // @icon         https://www.w3.org/2008/site/images/favicon.ico
