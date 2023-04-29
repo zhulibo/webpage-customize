@@ -2,10 +2,8 @@ import {getNodeIterator} from "js-fragment";
 
 // 张鑫旭博客
 export default function () {
-  // DOM结构加载完毕
-  document.addEventListener('DOMContentLoaded',function(){
-    if(location.href.match('://www.zhangxinxu.com/')){
-
+  if(location.href.match('://www.zhangxinxu.com/')){
+    document.addEventListener('DOMContentLoaded',function(){
       {
         // 前端技术页去掉中间广告
         let nodeIterator = getNodeIterator(function (node){
@@ -30,6 +28,6 @@ export default function () {
         }
       }
 
-    }
-  })
+    })
+  }
 }

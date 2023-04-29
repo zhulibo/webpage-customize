@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "a tampermonkey plugin, customized some webpage to make it more accessible",
   "scripts": {
-    "build": "rollup --config"
+    "dev": "rollup -c -w",
+    "build": "rollup -c"
   },
   "author": "",
   "license": "MIT",
