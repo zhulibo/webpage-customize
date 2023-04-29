@@ -6,6 +6,7 @@ import juejin from "./sites/juejin";
 import zhangxinxu from "./sites/zhangxinxu";
 import zhihu from "./sites/zhihu";
 import baidu from "./sites/baidu";
+import all from "./sites/all";
 
 const href = location.href
 
@@ -34,3 +35,5 @@ if(href.match('://www.zhangxinxu.com/')) {
 if(href.match('.zhihu.com/')) {
   zhihu()
 }
+
+all()
