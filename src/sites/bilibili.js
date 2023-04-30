@@ -6,7 +6,8 @@ export default function () {
     document.addEventListener('DOMContentLoaded',function(){
       {
         // 关闭adblock插件检测提示窗口
-        addStyle('.adblock-tips{display:none}')
+        addStyle('.adblock-tips{max-height: 0}')
+        console.log('关闭adblock插件检测提示窗口')
       }
 
     })
