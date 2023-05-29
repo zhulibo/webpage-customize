@@ -6,16 +6,6 @@ export default function () {
   let isNewsList = location.href.match(/:\/\/wap.gamersky.com\/news\/$/)
   let isNewsDetail = location.href.match(/:\/\/wap.gamersky.com\/news\/.+$/)
 
-  if(isNewsList || isNewsDetail) {
-    document.addEventListener('DOMContentLoaded',function(){
-      {
-        // pc端访问手机端网页时，修正字体过大的问题
-        addStyle('@media (min-width: 600px) {html{font-size: 60px!important} html .mainArea{ width: 10rem}}')
-      }
-
-    })
-  }
-
   if(isNewsList){
     document.addEventListener('DOMContentLoaded',function(){
       {
@@ -100,6 +90,15 @@ export default function () {
         const element = document.createElement('div')
         element.className = 'ymw-rel-mgame'
         document.body.append(element)
+      }
+
+      {
+        // 去除打开App阅读体验更佳，攻略、资讯实时更新
+        let node = document.querySelector('.ymw-footer')
+        if (node) {
+          console.log('已触发 ' + '.ymw-footer')
+          node.remove()
+        }
       }
 
     })
