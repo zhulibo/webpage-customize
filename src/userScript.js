@@ -2,7 +2,7 @@ export const userScript = `
 // ==UserScript==
 // @name         优化网站浏览体验、去广告、自动展开、解除跳转拦截等
 // @namespace    http://tampermonkey.net/
-// @version      1.11
+// @version      1.12
 // @description  优化网站浏览体验(repository: https://github.com/zhulibo/webpage-customize)
 // @author       zhu
 // @match        *://www.aliyundrive.com/drive*
