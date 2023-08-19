@@ -1,6 +1,6 @@
-// 知乎
-import {addStyle} from "js-fragment";
+import {loadCss} from "js-fragment";
 
+// 知乎
 export default function () {
   if (location.href.match('://link.zhihu.com/')) {
     document.addEventListener('DOMContentLoaded',function(){
@@ -17,9 +17,9 @@ export default function () {
     document.addEventListener('DOMContentLoaded',function(){
       {
         // 隐藏顶部banner
-        addStyle('.Pc-Business-Card-PcTopFeedBanner{display:none}')
+        loadCss('.Pc-Business-Card-PcTopFeedBanner{display:none}')
         // 文章详情页隐藏顶部标题
-        addStyle('.PageHeader{display:none}')
+        loadCss('.PageHeader{display:none}')
       }
 
     })

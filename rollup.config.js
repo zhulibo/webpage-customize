@@ -1,21 +1,14 @@
-// import {terser} from "rollup-plugin-terser";
 import { nodeResolve } from '@rollup/plugin-node-resolve';
-import {userScript} from "./src/userScript";
+import {banner} from "./src/banner.js";
 
 export default {
   input: './src/main.js',
   output: {
     file: './lib/main.js',
-    format: 'esm',
-    banner: userScript,
+    format: 'es',
+    banner
   },
   plugins: [
-    // terser({
-    //   compress: false,
-    //   format: {
-    //     comments: true
-    //   }
-    // }),
-    nodeResolve()
+    nodeResolve() // 把外部依赖块打入包内
   ]
 }

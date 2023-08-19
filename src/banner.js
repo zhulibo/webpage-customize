@@ -1,5 +1,4 @@
-export const userScript = `
-// ==UserScript==
+export const banner = `// ==UserScript==
 // @name         优化网站浏览体验、去广告、自动展开、解除跳转拦截等
 // @namespace    http://tampermonkey.net/
 // @version      1.12

@@ -1,18 +1,18 @@
-// baidu
-import {addStyle} from "js-fragment";
+import {loadCss} from "js-fragment";
 
+// baidu
 export default function () {
   if(location.href.match('://tieba.baidu.com/')) {
     document.addEventListener('DOMContentLoaded',function(){
       {
         // 隐藏帖子列表中的广告
-        addStyle('#thread_list > div{display: none}')
+        loadCss('#thread_list > div{display: none}')
         // 隐藏右侧侧广告
-        addStyle('#aside-ad{display: none}')
+        loadCss('#aside-ad{display: none}')
         // 隐藏左侧广告
-        addStyle('body > div:has( > .label_text){display: none}')
+        loadCss('body > div:has( > .label_text){display: none}')
         // 隐藏评论中的广告
-        addStyle('#j_p_postlist > div[data-field="{}"]{display: none}')
+        loadCss('#j_p_postlist > div[data-field="{}"]{display: none}')
       }
 
     })
@@ -20,12 +20,7 @@ export default function () {
   else if(location.href.match('://map.baidu.com/')) {
     window.addEventListener('load',function(){
       {
-        // 关闭地图右侧弹窗
-        let node = document.querySelector('.close-btn-indexpage')
-        if (node) {
-          console.log('已触发 ' + '.close-btn-indexpage')
-          node.click()
-        }
+        loadCss('#message-panel.message-panel-open{display: none}')
       }
 
     })

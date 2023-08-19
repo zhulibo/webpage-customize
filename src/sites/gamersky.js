@@ -1,4 +1,4 @@
-import {addStyle, throttle} from "js-fragment";
+import {throttle} from "js-fragment";
 
 // 游民星空
 export default function () {
