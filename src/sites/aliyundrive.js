@@ -1,4 +1,4 @@
-import {loadCss} from "js-fragment";
+import {loadStyle} from "js-fragment";
 
 // 阿里云盘
 export default function () {
@@ -6,7 +6,7 @@ export default function () {
     document.addEventListener('DOMContentLoaded',function(){
       // 关闭屏幕中间开通会员提示
       {
-        loadCss('.business-tip--1SI5w {display: none!important}')
+        loadStyle('.business-tip--1SI5w {display: none!important}')
       }
 
     })

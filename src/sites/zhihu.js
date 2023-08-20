@@ -1,4 +1,4 @@
-import {loadCss} from "js-fragment";
+import {loadStyle} from "js-fragment";
 
 // 知乎
 export default function () {
@@ -17,9 +17,9 @@ export default function () {
     document.addEventListener('DOMContentLoaded',function(){
       {
         // 隐藏顶部banner
-        loadCss('.Pc-Business-Card-PcTopFeedBanner{display:none}')
+        loadStyle('.Pc-Business-Card-PcTopFeedBanner{display:none}')
         // 文章详情页隐藏顶部标题
-        loadCss('.PageHeader{display:none}')
+        loadStyle('.PageHeader{display:none}')
       }
 
     })

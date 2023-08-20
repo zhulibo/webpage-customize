@@ -1,4 +1,4 @@
-import {loadCss} from "js-fragment";
+import {loadStyle} from "js-fragment";
 
 // 哔哩哔哩
 export default function () {
@@ -6,7 +6,7 @@ export default function () {
     document.addEventListener('DOMContentLoaded',function(){
       {
         // 关闭adblock插件检测提示窗口
-        loadCss('.adblock-tips{max-height: 0}')
+        loadStyle('.adblock-tips{max-height: 0}')
         console.log('关闭adblock插件检测提示窗口')
       }
 
