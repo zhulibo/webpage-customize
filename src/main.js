@@ -9,7 +9,7 @@ import baidu from "./sites/baidu";
 
 const href = location.href
 
-// 不用if else防止跳转跳转误判
+// 不用if else防止跳转误判
 if(href.match('://www.aliyundrive.com/drive')) {
   aliyundrive()
 }
