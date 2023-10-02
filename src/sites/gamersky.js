@@ -50,10 +50,8 @@ export default function () {
         // 新闻页去除一些页面元素
         let items = [
           '.ymwBootDownload', // 顶部顶部下载App
-          '.BaiduAdvertising', // 顶部百度广告
           '.gsTgWapConBdshareTopBox', // 打开游民APP，查看更多精彩内容
           '.ymw-rel-list', // app精彩推荐
-          '._0vyin34jlngb', // 底部百度广告
           '.ymw-hot-h5-game', // 热门h5手游
         ]
         for (let i = 0; i < items.length; i++) {
@@ -111,6 +109,14 @@ export default function () {
         let node = document.querySelector('#SOHUCS > a')
         if (node) {
           console.log('已触发 ' + '#SOHUCS > a')
+          node.remove()
+        }
+      }
+      {
+        // 去除打开游民APP，查看xx条精彩评论
+        let node = document.querySelector('.tbshare')
+        if (node) {
+          console.log('已触发 ' + '.tbshare')
           node.remove()
         }
       }

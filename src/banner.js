@@ -1,17 +1,11 @@
 export const banner = `// ==UserScript==
-// @name         优化一些网站的浏览体验
+// @name         B站点击A键网页全屏，关闭检测adblock警告。游民星空手机新闻页去广告
 // @namespace    http://tampermonkey.net/
-// @version      1.13
+// @version      1.14
 // @description  repository: https://github.com/zhulibo/webpage-customize
 // @author       zhu
-// @match        *://www.aliyundrive.com/drive*
-// @match        *.baidu.com/*
 // @match        *://www.bilibili.com/*
 // @match        *://wap.gamersky.com/news/*
-// @match        *.ithome.com/*
-// @match        *.juejin.cn/*
-// @match        *://www.zhangxinxu.com/*
-// @match        *.zhihu.com/*
 // @icon         https://www.w3.org/2008/site/images/favicon.ico
 // @grant        none
 // @run-at       document-start

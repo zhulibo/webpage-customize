@@ -23,14 +23,8 @@ A tampermonkey plugin which customize some webpage to make it more accessible
 // @version      1.00
 // @description  require本地文件
 // @author       zhu
-// @match        *://www.aliyundrive.com/drive*
-// @match        *.baidu.com/*
 // @match        *://www.bilibili.com/*
 // @match        *://wap.gamersky.com/news/*
-// @match        *.ithome.com/*
-// @match        *.juejin.cn/*
-// @match        *://www.zhangxinxu.com/*
-// @match        *.zhihu.com/*
 // @icon         https://www.w3.org/2008/site/images/favicon.ico
 // @grant        none
 // @run-at       document-start

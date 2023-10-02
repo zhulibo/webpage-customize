@@ -10,27 +10,27 @@ import baidu from "./sites/baidu";
 const href = location.href
 
 // 不用if else防止跳转误判
-if(href.match('://www.aliyundrive.com/drive')) {
-  aliyundrive()
-}
-if(href.match('.baidu.com/')) {
-  baidu()
-}
+// if(href.match('://www.aliyundrive.com/drive')) {
+//   aliyundrive()
+// }
+// if(href.match('.baidu.com/')) {
+//   baidu()
+// }
 if(href.match('://www.bilibili.com/')) {
   bilibili()
 }
 if(href.match('://wap.gamersky.com/news/')) {
   gamersky()
 }
-if(href.match('.ithome.com/')) {
-  ithome()
-}
-if(href.match('.juejin.cn/')) {
-  juejin()
-}
-if(href.match('://www.zhangxinxu.com/')) {
-  zhangxinxu()
-}
-if(href.match('.zhihu.com/')) {
-  zhihu()
-}
+// if(href.match('.ithome.com/')) {
+//   ithome()
+// }
+// if(href.match('.juejin.cn/')) {
+//   juejin()
+// }
+// if(href.match('://www.zhangxinxu.com/')) {
+//   zhangxinxu()
+// }
+// if(href.match('.zhihu.com/')) {
+//   zhihu()
+// }
