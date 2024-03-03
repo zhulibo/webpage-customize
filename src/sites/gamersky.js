@@ -3,10 +3,8 @@ import {throttle} from "js-fragment";
 // 游民星空
 export default function () {
 
-  let isNewsList = location.href.match(/:\/\/wap.gamersky.com\/news\/$/)
-  let isNewsDetail = location.href.match(/:\/\/wap.gamersky.com\/news\/.+$/)
-
-  if(isNewsList){
+  // 新闻列表页
+  if(location.href.match(/:\/\/wap.gamersky.com\/news\/$/)){
     document.addEventListener('DOMContentLoaded',function(){
       {
         // 去除一些页面元素
@@ -44,7 +42,8 @@ export default function () {
     })
   }
 
-  if(isNewsDetail) {
+  // 新闻详情页
+  if(location.href.match(/:\/\/wap.gamersky.com\/news\/.+$/)) {
     document.addEventListener('DOMContentLoaded',function() {
       {
         // 新闻页去除一些页面元素
@@ -100,9 +99,7 @@ export default function () {
       }
 
     })
-  }
 
-  if (isNewsDetail) {
     window.addEventListener('load',function(){
       {
         // 去除打开游民APP，查看xx条精彩评论
@@ -112,16 +109,18 @@ export default function () {
           node.remove()
         }
       }
+
       {
-        // 去除打开游民APP，查看xx条精彩评论
-        let node = document.querySelector('.tbshare')
+        // 去除评论上方的广告
+        let node = document.querySelector('#gsTgWapConBdshareTop + div')
         if (node) {
-          console.log('已触发 ' + '.tbshare')
+          console.log('已触发 ' + '#gsTgWapConBdshareTop + div')
           node.remove()
         }
       }
 
     })
+
   }
 
 }
