@@ -9,7 +9,27 @@ export default function () {
         loadStyle('.adblock-tips{max-height: 0}')
         console.log('关闭检测adblock警告')
       }
-
+      {
+        // 关闭检测adblock警告
+        loadStyle(
+          '.container .recommended-swipe{' +
+          'display: none !important;' +
+          '--cover-radio: 40% !important;' +
+          'position: inherit;' +
+          'overflow: initial;' +
+          'grid-column: initial;' +
+          'grid-column: initial;' +
+          'grid-row: initial;' +
+          '}' +
+          '.container> div{' +
+          'margin-top: 0px !important;' +
+          '}' +
+          '.container .feed-card{' +
+          'display: block !important;' +
+          '}'
+        )
+        console.log('关闭检测adblock警告')
+      }
       {
         // 监听键盘a键，切换网页全屏
         document.addEventListener('keydown',(e)=>{
