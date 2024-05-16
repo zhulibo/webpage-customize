@@ -10,6 +10,7 @@ export default function () {
         // 去除一些页面元素
         let items = [
           '.ymw-header2019', // 顶部下载App
+          '#gsTgWapTop', // 顶部广告
         ]
         for (let i = 0; i < items.length; i++) {
           let node = document.querySelectorAll(items[i])
@@ -49,6 +50,7 @@ export default function () {
         // 新闻页去除一些页面元素
         let items = [
           '.ymwBootDownload', // 顶部顶部下载App
+          '#gsTgWapTop', // 顶部广告
           '.gsTgWapConBdshareTopBox', // 打开游民APP，查看更多精彩内容
           '.ymw-rel-list', // app精彩推荐
           '.ymw-hot-h5-game', // 热门h5手游

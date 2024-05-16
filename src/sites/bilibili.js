@@ -7,10 +7,10 @@ export default function () {
       {
         // 关闭检测adblock警告
         loadStyle('.adblock-tips{max-height: 0}')
-        console.log('关闭检测adblock警告')
       }
+
       {
-        // 关闭检测adblock警告
+        // 首页样式调整
         loadStyle(
           '.container .recommended-swipe{' +
           'display: none !important;' +
@@ -28,8 +28,8 @@ export default function () {
           'display: block !important;' +
           '}'
         )
-        console.log('关闭检测adblock警告')
       }
+
       {
         // 监听键盘a键，切换网页全屏
         document.addEventListener('keydown',(e)=>{
