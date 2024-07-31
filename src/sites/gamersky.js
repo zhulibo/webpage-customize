@@ -54,6 +54,7 @@ export default function () {
           '.gsTgWapConBdshareTopBox', // 打开游民APP，查看更多精彩内容
           '.ymw-rel-list', // app精彩推荐
           '.ymw-hot-h5-game', // 热门h5手游
+          '#gsTgWapConBdshareTop', // 底部广告
         ]
         for (let i = 0; i < items.length; i++) {
           let node = document.querySelectorAll(items[i])
