@@ -2,10 +2,10 @@ import {loadStyle} from "js-fragment";
 
 // 哔哩哔哩
 export default function () {
-  if(location.href.match('://www.bilibili.com/')){
+  if (location.href.match('://www.bilibili.com/')){
     document.addEventListener('DOMContentLoaded',function(){
       {
-        // 关闭检测adblock警告
+        // 隐藏检测adblock警告
         loadStyle('.adblock-tips{max-height: 0}')
       }
 
@@ -44,5 +44,12 @@ export default function () {
       }
 
     })
+  }
+
+  // 禁止直播页面p2p上传
+  if (location.href.match('://live.bilibili.com/')){
+    delete window.RTCPeerConnection;
+    delete window.mozRTCPeerConnection;
+    delete window.webkitRTCPeerConnection;
   }
 }

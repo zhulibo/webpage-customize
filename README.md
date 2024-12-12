@@ -10,7 +10,7 @@ A tampermonkey plugin which customize some webpage to make it more accessible
 
 ## 本地开发测试
 
-1、打开浏览器扩展程序 > tampermonkey详情 > 允许访问文件网址
+1、打开管理扩展程序 > tampermonkey详情 > 允许访问文件网址
 
 2、打开Tampermonkey插件 > 通用-配置模式：选择高级 > 安全-允许脚本访问本地文件：选择所有本地文件
 
@@ -24,6 +24,7 @@ A tampermonkey plugin which customize some webpage to make it more accessible
 // @description  require本地文件
 // @author       zhu
 // @match        *://www.bilibili.com/*
+// @match        *://live.bilibili.com/*
 // @match        *://wap.gamersky.com/news/*
 // @icon         https://www.w3.org/2008/site/images/favicon.ico
 // @grant        none
