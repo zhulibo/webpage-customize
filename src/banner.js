@@ -1,7 +1,7 @@
 export const banner = `// ==UserScript==
 // @name         B站点击A键网页全屏，关闭adblock检测警告，禁止直播页面p2p上传；游民星空手机新闻页去广告。
 // @namespace    http://tampermonkey.net/
-// @version      1.20
+// @version      1.21
 // @description  repository: https://github.com/zhulibo/webpage-customize
 // @author       zhu
 // @match        *.bilibili.com/*

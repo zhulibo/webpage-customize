@@ -2,7 +2,7 @@ import {loadStyle} from "js-fragment";
 
 // 哔哩哔哩
 export default function () {
-  function fn() {
+  function fn1() {
     {
       // 隐藏检测adblock警告
       loadStyle('.adblock-tips{max-height: 0}')
@@ -19,7 +19,9 @@ export default function () {
         '}'
       )
     }
+  }
 
+  function fn2() {
     {
       // 监听键盘a键，切换网页全屏
       document.addEventListener('keydown', (e) => {
@@ -36,12 +38,13 @@ export default function () {
 
   if (location.href.match('://www.bilibili.com/')){
     document.addEventListener('DOMContentLoaded',function(){
-      fn();
+      fn1();
     })
 
     // 未监听到DOMContentLoaded降级处理
     window.addEventListener('load',function(){
-      fn();
+      fn1();
+      fn2();
     })
   }
 
