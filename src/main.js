@@ -16,7 +16,7 @@ const href = location.href
 // if(href.match('.baidu.com/')) {
 //   baidu()
 // }
-if(href.match('://www.bilibili.com/') || href.match('://live.bilibili.com/')) {
+if(href.match('.bilibili.com/')) {
   bilibili()
 }
 if(href.match('://wap.gamersky.com/news/')) {
