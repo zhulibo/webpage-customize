@@ -23,9 +23,9 @@ A tampermonkey plugin which customize some webpage to make it more accessible
 // @version      1.00
 // @description  require本地文件
 // @author       zhu
-// @match        *://www.bilibili.com/*
-// @match        *://live.bilibili.com/*
+// @match        *.bilibili.com/*
 // @match        *://wap.gamersky.com/news/*
+// @match        *://outlook.live.com/*
 // @icon         https://www.w3.org/2008/site/images/favicon.ico
 // @grant        none
 // @run-at       document-start

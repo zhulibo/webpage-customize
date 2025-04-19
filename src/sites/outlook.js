@@ -5,7 +5,7 @@ export default function () {
     document.addEventListener('DOMContentLoaded',function(){
       // 关闭左侧栏
       {
-        loadStyle('.QVF0n {display: none!important}')
+        loadStyle('.QVF0n {display: none}')
       }
 
     })
