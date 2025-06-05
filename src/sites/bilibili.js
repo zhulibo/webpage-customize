@@ -16,6 +16,9 @@ export default function () {
         '}' +
         '.container> div{' +
         'margin-top: 0px !important;' +
+        '}' +
+        '.bili-video-card:has(.ad-feedback-entry){' +
+        'display: none !important;' +
         '}'
       )
     }
@@ -36,14 +39,14 @@ export default function () {
     }
   }
 
-  if (location.href.match('://www.bilibili.com/')){
+  if (location.href.match('://www.bilibili.com/') || location.href.match('://search.bilibili.com/')){
     document.addEventListener('DOMContentLoaded',function(){
       fn1();
     })
 
-    // 未监听到DOMContentLoaded降级处理
+
     window.addEventListener('load',function(){
-      fn1();
+      fn1(); // 未监听到DOMContentLoaded降级处理
       fn2();
     })
   }
