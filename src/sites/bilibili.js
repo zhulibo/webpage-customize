@@ -54,7 +54,7 @@ export default function () {
   // 禁止直播页面p2p上传
   if (location.href.match('://live.bilibili.com/')){
     delete window.RTCPeerConnection;
-    delete window.mozRTCPeerConnection;
     delete window.webkitRTCPeerConnection;
+    delete window.mozRTCPeerConnection;
   }
 }
