@@ -26,6 +26,7 @@ export default function () {
 
   function fn2() {
     {
+      // TODO 直播页无效
       // 监听键盘a键，切换网页全屏
       document.addEventListener('keydown', (e) => {
         // 排除文字输入状态
@@ -39,11 +40,10 @@ export default function () {
     }
   }
 
-  if (location.href.match('://www.bilibili.com/') || location.href.match('://search.bilibili.com/')){
+  if (location.href.match('://www.bilibili.com/') || location.href.match('://search.bilibili.com/') || location.href.match('://live.bilibili.com/')){
     document.addEventListener('DOMContentLoaded',function(){
       fn1();
     })
-
 
     window.addEventListener('load',function(){
       fn1(); // 未监听到DOMContentLoaded降级处理
